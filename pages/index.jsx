@@ -9,8 +9,8 @@ const Index = () => {
       <div className="jais-port">
         <HeroComp />
         <About />
-        {/* <Services />
-      <Projects />
+        <Services />
+      {/* <Projects />
       <Contact />
     <Footer /> */}
       </div>

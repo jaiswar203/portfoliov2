@@ -252,6 +252,7 @@ body::-webkit-scrollbar-thumb {
 }
 .jais-port__about-title .detail {
   position: absolute;
+  font-family: "Space Grotesk", sans-serif;
   bottom: -1rem;
   display: flex;
   justify-content: center;
@@ -353,5 +354,101 @@ body::-webkit-scrollbar-thumb {
   }
   .jais-port__about-content__detail .hire__btn .btn {
     width: 100%;
+  }
+}
+.jais-port__services {
+  margin-top: 4rem;
+  background: rgb(239, 239, 239);
+  font-family: "Playfair Display", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.jais-port__services-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.jais-port__services-title .stroke__title {
+  font-size: 4rem;
+}
+.jais-port__services-title .stroke__title h1 {
+  opacity: 0.1;
+  color: white;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 1px;
+}
+.jais-port__services-title .detail {
+  position: absolute;
+  font-family: "Space Grotesk", sans-serif;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+.jais-port__services-content {
+  padding: 3rem 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.jais-port__services-content .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.jais-port__services-content .item__outer {
+  color: white;
+  margin-bottom: 2rem;
+  position: relative;
+}
+.jais-port__services-content .item__outer .shell {
+  background: black;
+  padding: 4rem;
+  transform: rotate(45deg);
+}
+.jais-port__services-content .item__outer .img {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  bottom: 5rem !important;
+}
+@media screen and (max-width: 1050px) {
+  .jais-port__services-content {
+    padding: 3rem 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  .jais-port__services-title .stroke__title {
+    font-size: 3rem;
+  }
+  .jais-port__services-title .detail {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .jais-port__services .stroke__title {
+    font-size: 2rem;
+  }
+  .jais-port__services .detail {
+    font-size: 1rem;
+    bottom: 0.5rem;
+  }
+  .jais-port__services-content {
+    flex-direction: column;
+  }
+  .jais-port__services-content .item {
+    margin-bottom: 5rem;
+  }
+  .jais-port__services-content .item:last-child {
+    margin-bottom: 0;
   }
 }/*# sourceMappingURL=index.css.map */

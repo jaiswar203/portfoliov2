@@ -94,7 +94,7 @@ const Navbar = () => {
             {winWidth < 820 ? isMenuOpen && (
                 <motion.div className="jais-port__navbar-item" initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }}>
                     {childOfNavbar()}
-                    <motion.div className="mobile__hire" whileTap={{ scale: 1.05 }}>
+                    <motion.div className="mobile__hire" whileTap={{ scale: 0.95 }}>
                         <h3>Hire Me</h3>
                     </motion.div>
                 </motion.div>
