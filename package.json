@@ -9,9 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.2",
+    "@sanity/client": "^2.23.2",
+    "@sanity/image-url": "^1.0.1",
+    "axios": "^0.27.2",
+    "framer-motion": "^6.3.11",
     "next": "12.1.6",
+    "next-sanity-image": "^3.2.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
+    "react-redux": "^8.0.2",
+    "typewriter-effect": "^2.18.2"
   },
   "devDependencies": {
     "eslint": "8.17.0",
