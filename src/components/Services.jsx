@@ -30,7 +30,7 @@ const Services = () => {
         {
           items.map((item) => (
 
-            <div className="item">
+            <div className="item" key={item.name}>
               <div className="item__outer">
                 <div className="shell" />
                 <div className="img">
