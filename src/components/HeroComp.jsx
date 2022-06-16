@@ -19,7 +19,7 @@ const HeroComp = () => {
         </div>
         <div className="jais-port__hero-contact">
           <motion.div className="btn" whileTap={{ scale: 0.95 }}>
-            <h3>Let's Talk</h3>
+            <h3>Let&lsquo;s Talk</h3>
           </motion.div>
         </div>
       </div>
