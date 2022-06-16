@@ -9,6 +9,12 @@
   box-sizing: border-box;
 }
 
+// html,
+// body,
+// * {
+//   cursor: none;
+// }
+
 $color1: #edf2f4;
 $color2: #8d99ae;
 $color3: #ef233c;
@@ -36,7 +42,6 @@ body {
 @mixin button__color {
   background: $color4;
   color: $color1;
-  
 }
 
 body::-webkit-scrollbar {
@@ -48,12 +53,23 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    border-radius: 1rem;
-    background: $color4;
+  border-radius: 1rem;
+  background: $color4;
 }
 
-
-.highlighter{
+.highlighter {
   color: $color4;
+}
+
+.cursor {
+  z-index: 1000;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid $color4;
+  pointer-events: none;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  position: fixed;
 }
 

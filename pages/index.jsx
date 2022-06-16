@@ -1,16 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useEffect } from 'react'
+import { CustomCursor } from '../src/components/customCursor'
 
-import { Navbar, HeroComp, About, Services, Projects, Contact, Footer } from '../src/components'
+
+import { Navbar, HeroComp, About, Services, Projects, Contact, Footer ,Technologies} from '../src/components'
 
 const Index = () => {
+  const [winWidth, setWinWidth] = useState(0)
+
+  useEffect(() => {
+    setWinWidth(window.innerWidth)
+  }, [winWidth])
+
+  
   return (
     <>
-      <Navbar />
+      {/* <CustomCursor /> */}
+      <Navbar winWidth={winWidth} />
       <div className="jais-port">
-        <HeroComp />
-        <About />
+        <HeroComp winWidth={winWidth} />
+        <About winWidth={winWidth} />
         <Services />
-      {/* <Projects />
+        {/* <Technologies /> */}
+        {/* <Projects />
       <Contact />
     <Footer /> */}
       </div>

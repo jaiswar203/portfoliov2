@@ -21,8 +21,21 @@ body::-webkit-scrollbar-thumb {
   color: #d90429;
 }
 
+.cursor {
+  z-index: 1000;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid #d90429;
+  pointer-events: none;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  position: fixed;
+}
+
 .jais-port {
   padding: 2rem;
+  color: #2b2d42;
 }
 .jais-port__navbar {
   position: fixed;
@@ -112,13 +125,18 @@ body::-webkit-scrollbar-thumb {
 }
 .jais-port__navbar-btn {
   font-family: "Playfair Display", serif;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
   border-radius: 3px;
   background: black;
   color: white;
   cursor: pointer;
   background: #d90429;
   color: #edf2f4;
+  width: 8rem;
 }
 @media screen and (max-width: 950px) {
   .jais-port__navbar-item .item {
@@ -137,7 +155,7 @@ body::-webkit-scrollbar-thumb {
     z-index: 2;
     position: absolute;
     top: 5rem;
-    width: 10rem;
+    width: 11rem;
     right: 2rem;
     background-color: #dedede;
     border-radius: 5px;
@@ -158,6 +176,10 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     background: #d90429;
     color: #edf2f4;
+    cursor: pointer;
+  }
+  .jais-port__navbar-item .mobile__hire svg {
+    margin-right: 0.5rem;
   }
   .jais-port__navbar-btn {
     display: none;
@@ -185,8 +207,18 @@ body::-webkit-scrollbar-thumb {
 .jais-port__hero-info .line1 h1 span {
   color: #ef233c;
 }
+.jais-port__hero-info .line1 p span {
+  color: #d90429;
+}
+.jais-port__hero-info .line1 p:last-child {
+  margin-top: 1.5rem;
+}
+.jais-port__hero-info .line1 p:last-child span {
+  color: #d90429;
+  border-bottom: 2px solid black;
+}
 .jais-port__hero-contact {
-  margin-top: 3rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,7 +226,7 @@ body::-webkit-scrollbar-thumb {
 }
 .jais-port__hero-contact .btn {
   cursor: pointer;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 3rem;
   background: #d90429;
   color: #edf2f4;
   border-radius: 5px;
@@ -245,7 +277,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 4rem;
 }
 .jais-port__about-title .stroke__title h1 {
-  opacity: 0.1;
+  opacity: 0.07;
   color: white;
   -webkit-text-stroke-color: black;
   -webkit-text-stroke-width: 1px;
@@ -253,7 +285,7 @@ body::-webkit-scrollbar-thumb {
 .jais-port__about-title .detail {
   position: absolute;
   font-family: "Space Grotesk", sans-serif;
-  bottom: -1rem;
+  bottom: -1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -304,6 +336,8 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
   width: 10rem;
   background: #d90429;
   color: #edf2f4;
@@ -343,7 +377,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 2.5rem;
   }
   .jais-port__about-title .detail {
-    bottom: -0.7rem;
+    bottom: -0.8rem;
     font-size: 1rem;
   }
   .jais-port__about-content__detail {
@@ -353,7 +387,11 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
   }
   .jais-port__about-content__detail .hire__btn .btn {
+    justify-content: center;
     width: 100%;
+  }
+  .jais-port__about-content__detail .hire__btn .btn svg {
+    margin-right: 1rem;
   }
 }
 .jais-port__services {
@@ -376,7 +414,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 4rem;
 }
 .jais-port__services-title .stroke__title h1 {
-  opacity: 0.1;
+  opacity: 0.07;
   color: white;
   -webkit-text-stroke-color: black;
   -webkit-text-stroke-width: 1px;
@@ -384,7 +422,7 @@ body::-webkit-scrollbar-thumb {
 .jais-port__services-title .detail {
   position: absolute;
   font-family: "Space Grotesk", sans-serif;
-  bottom: 1rem;
+  bottom: 0.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -397,6 +435,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   justify-content: space-around;
+  overflow: hidden;
   width: 100%;
 }
 .jais-port__services-content .item {
@@ -411,6 +450,8 @@ body::-webkit-scrollbar-thumb {
   position: relative;
 }
 .jais-port__services-content .item__outer .shell {
+  border: 3px solid #d90429;
+  border-radius: 4px;
   background: black;
   padding: 4rem;
   transform: rotate(45deg);
@@ -440,7 +481,7 @@ body::-webkit-scrollbar-thumb {
   }
   .jais-port__services .detail {
     font-size: 1rem;
-    bottom: 0.5rem;
+    bottom: 0.3rem;
   }
   .jais-port__services-content {
     flex-direction: column;
@@ -448,7 +489,47 @@ body::-webkit-scrollbar-thumb {
   .jais-port__services-content .item {
     margin-bottom: 5rem;
   }
+  .jais-port__services-content .item h2 {
+    font-size: 1.1rem;
+  }
+  .jais-port__services-content .item .shell {
+    padding: 3rem;
+  }
+  .jais-port__services-content .item .img {
+    top: 1rem;
+    left: 1rem;
+  }
   .jais-port__services-content .item:last-child {
     margin-bottom: 0;
   }
+}
+.jais-port__technology {
+  margin-top: 5rem;
+  font-family: "Playfair Display", serif;
+}
+.jais-port__technology-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.jais-port__technology-title .stroke__title {
+  font-size: 4rem;
+}
+.jais-port__technology-title .stroke__title h1 {
+  opacity: 0.07;
+  color: white;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 1px;
+}
+.jais-port__technology-title .detail {
+  position: absolute;
+  font-family: "Space Grotesk", sans-serif;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=index.css.map */

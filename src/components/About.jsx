@@ -3,10 +3,11 @@ import Image from 'next/image'
 import { motion } from 'framer-motion' 
 
 import AboutImage from "../../illustrations/about.gif"
+import { BiDownload } from "react-icons/bi"
 
-const About = () => {
+const About = ({winWidth}) => {
   return (
-    <div className="jais-port__about">
+    <section className="jais-port__about" id='aboutme'>
       <div className="jais-port__about-title">
         <div className="stroke__title">
           <h1>About Me</h1>
@@ -27,12 +28,13 @@ const About = () => {
           </div>
           <div className="hire__btn">
             <motion.div className="btn" whileTap={{scale:0.95}}>
-              <h3>Hire Me</h3>
+              <BiDownload size={ winWidth < 500 ? 25 : 30} />
+              <h3>Resume</h3>
             </motion.div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

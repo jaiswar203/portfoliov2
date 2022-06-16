@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
 
+import {motion} from 'framer-motion'
+
 const Services = () => {
   const items = [
     {
@@ -17,7 +19,7 @@ const Services = () => {
     },
   ]
   return (
-    <div className="jais-port__services">
+    <motion.section className="jais-port__services" id='services' initial={{y:100,opacity:0}} whileInView={{y:0,opacity:1}} viewport={{once:true}} transition={{duration:1}} >
       <div className="jais-port__services-title">
         <div className="stroke__title">
           <h1>My Services</h1>
@@ -28,9 +30,8 @@ const Services = () => {
       </div>
       <div className="jais-port__services-content">
         {
-          items.map((item) => (
-
-            <div className="item" key={item.name}>
+          items.map((item,i) => (
+            <motion.div className="item" key={item.name} initial={{y:100,opacity:0}} whileInView={{y:0,opacity:1}} transition={{delay:i*1,duration:1}} viewport={{once:true}}>
               <div className="item__outer">
                 <div className="shell" />
                 <div className="img">
@@ -38,11 +39,12 @@ const Services = () => {
                 </div>
               </div>
               <h2>{item.name}</h2>
-            </div>
+            </motion.div>
           ))
         }
       </div>
-    </div>
+      
+    </motion.section>
   )
 }
 

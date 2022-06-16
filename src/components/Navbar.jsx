@@ -1,17 +1,18 @@
-import React, { useEffect,useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Link from "next/link"
 import { useState } from 'react'
 import { motion } from "framer-motion"
 
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri"
+import { BiDownload } from "react-icons/bi"
 import { GiPentarrowsTornado } from "react-icons/gi"
 
-const Navbar = () => {
+const Navbar = ({ winWidth }) => {
     const [initialLink, setInitialLink] = useState(0)
     const [isMenuOpen, setisMenuOpen] = useState(false)
-    const headerRef=useRef()
+    const headerRef = useRef()
 
-    const [winWidth, setWinWidth] = useState(0)
+
     const links = [
         {
             id: 0,
@@ -40,15 +41,19 @@ const Navbar = () => {
         },
     ]
     useEffect(() => {
-        setWinWidth(window.innerWidth)
 
-        window.onscroll=(() => {
+
+        window.onscroll = (() => {
             if (window.pageYOffset >= 66) {
                 headerRef.current.classList.add("sticky")
             } else {
                 headerRef.current.classList.remove("sticky");
             }
         })
+
+        const sections = document.querySelectorAll("section")
+        // const 
+
     }, [initialLink, isMenuOpen])
 
     function childOfNavbar() {
@@ -95,7 +100,8 @@ const Navbar = () => {
                 <motion.div className="jais-port__navbar-item" initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }}>
                     {childOfNavbar()}
                     <motion.div className="mobile__hire" whileTap={{ scale: 0.95 }}>
-                        <h3>Hire Me</h3>
+                        <BiDownload size={20} />
+                        <h3>Resume</h3>
                     </motion.div>
                 </motion.div>
             ) : (
@@ -104,7 +110,8 @@ const Navbar = () => {
                 </div>
             )}
             <motion.div className="jais-port__navbar-btn" whileTap={{ scale: 0.95 }} transition={{ duration: .2 }}>
-                <h3>Hire Me</h3>
+                <BiDownload size={20} />
+                <h3>Resume</h3>
             </motion.div>
         </div>
     )
