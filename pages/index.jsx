@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
+import dynamic from "next/dynamic"
 import { useEffect } from 'react'
-import { CustomCursor } from '../src/components/customCursor'
 
 
-import { Navbar, HeroComp, About, Services, Projects, Contact, Footer ,Technologies} from '../src/components'
+
+import { Navbar, HeroComp, About, Services, Projects, Contact, Footer } from '../src/components'
+
+const Technologies = dynamic(() => import("../src/components/Technologies"), { ssr: false })
 
 const Index = () => {
   const [winWidth, setWinWidth] = useState(0)
@@ -12,7 +15,7 @@ const Index = () => {
     setWinWidth(window.innerWidth)
   }, [winWidth])
 
-  
+
   return (
     <>
       {/* <CustomCursor /> */}
@@ -21,7 +24,7 @@ const Index = () => {
         <HeroComp winWidth={winWidth} />
         <About winWidth={winWidth} />
         <Services />
-        {/* <Technologies /> */}
+        <Technologies winWidth={winWidth} />
         {/* <Projects />
       <Contact />
     <Footer /> */}

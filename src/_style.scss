@@ -1,7 +1,7 @@
 .jais-port {
   padding: 2rem;
   color: $color5;
-  
+
   &__navbar {
     position: fixed;
     width: 100%;
@@ -133,8 +133,8 @@
           width: 100%;
           @include button__color;
           cursor: pointer;
-          svg{
-            margin-right: .5rem;
+          svg {
+            margin-right: 0.5rem;
           }
         }
       }
@@ -165,14 +165,14 @@
             color: $color3;
           }
         }
-        p{
-          span{
+        p {
+          span {
             color: $color4;
           }
         }
-        p:last-child{
+        p:last-child {
           margin-top: 1.5rem;
-          span{
+          span {
             color: $color4;
             border-bottom: 2px solid black;
           }
@@ -347,7 +347,7 @@
                 justify-content: center;
                 width: 100%;
 
-                svg{
+                svg {
                   margin-right: 1rem;
                 }
               }
@@ -388,7 +388,7 @@
         font-size: 1.5rem;
       }
     }
-    
+
     &-content {
       padding: 3rem 8rem;
       @include center__element;
@@ -420,59 +420,57 @@
         }
       }
     }
-    @media screen and (max-width:1050px) {
-
-      &-content{
+    @media screen and (max-width: 1050px) {
+      &-content {
         padding: 3rem 0;
       }
-
     }
 
-    @media screen and (max-width:900px) {
-      &-title{
-        .stroke__title{
+    @media screen and (max-width: 900px) {
+      &-title {
+        .stroke__title {
           font-size: 3rem;
         }
-        .detail{
+        .detail {
           font-size: 1.3rem;
         }
       }
     }
 
-    @media screen and (max-width:650px) {
-      .stroke__title{
+    @media screen and (max-width: 650px) {
+      .stroke__title {
         font-size: 2rem;
       }
-      .detail{
+      .detail {
         font-size: 1rem;
         bottom: 0.3rem;
       }
-      &-content{
+      &-content {
         flex-direction: column;
-        .item{
+        .item {
           margin-bottom: 5rem;
-          h2{
+          h2 {
             font-size: 1.1rem;
           }
-          .shell{
+          .shell {
             padding: 3rem;
           }
-          .img{
+          .img {
             top: 1rem;
             left: 1rem;
           }
-          &:last-child{
+          &:last-child {
             margin-bottom: 0;
           }
         }
       }
     }
   }
-  &__technology{
+  &__technology {
     margin-top: 5rem;
     @include heading_font;
 
-    &-title{
+    &-title {
       position: relative;
       @include center__element;
       flex-direction: column;
@@ -485,15 +483,85 @@
           -webkit-text-stroke-width: 1px;
         }
       }
-      
+
       .detail {
         position: absolute;
         @include normal_font;
         bottom: 1rem;
         @include center__element;
-      
+
         flex-direction: column;
         font-size: 1.5rem;
+      }
+    }
+
+    &-content{
+      margin-top: 3rem;
+      .desktop{
+        padding: 1rem 8rem;
+        &__tech{
+          background: rgba($color: $color1, $alpha: 1.0);
+          border-radius: 5px;
+          box-shadow: 0px 10px 20px rgba(0,0,0,0.16);
+          padding: 1rem;
+          @include center__element;
+          width: 10rem;
+          height: 10rem;
+          
+          img{
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .swiper-button-next, .swiper-button-prev{
+          color: $color4;
+        }
+
+        @media screen and (max-width:700px) {
+          padding: 1rem 6rem;
+        }
+      }
+      
+      .mobile{
+        padding: 2rem 3rem;
+        &__tech{
+          background: rgba($color: $color1, $alpha: 1.0);
+          border-radius: 5px;
+          box-shadow: 0px 10px 20px rgba(0,0,0,0.16);
+          padding: 1rem;
+          @include center__element;
+          width: 100%;
+          height: 15rem;
+          // height: 10rem;
+        }
+        .swiper-pagination{
+          bottom: -3rem !important ;
+        }
+        .swiper-pagination-bullet-active{
+          background: $color4 !important;
+        }
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      &-title {
+        .stroke__title {
+          font-size: 3rem;
+        }
+        .detail {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    @media screen and (max-width: 650px) {
+      .stroke__title {
+        font-size: 2rem;
+      }
+      .detail {
+        font-size: 1rem;
+        bottom: 0.3rem;
       }
     }
   }

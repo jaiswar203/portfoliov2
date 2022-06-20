@@ -17,7 +17,7 @@ const HeroComp = ({winWidth}) => {
     <section className="jais-port__hero" id='home'>
       <div className="jais-port__hero-info">
         <div className="line1">
-          <h2>Hello, There</h2>
+          <h2>Hello There,</h2>
           <h1>I am <span>
             {/* <Typewriter options={{ strings: ["Nilesh Jaiswar.", "A Web Developer."], autoStart: true, loop: true }} /> */}
             Nilesh Jaiswar.

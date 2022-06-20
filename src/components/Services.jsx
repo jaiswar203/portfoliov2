@@ -19,7 +19,7 @@ const Services = () => {
     },
   ]
   return (
-    <motion.section className="jais-port__services" id='services' initial={{y:100,opacity:0}} whileInView={{y:0,opacity:1}} viewport={{once:true}} transition={{duration:1}} >
+    <section className="jais-port__services" id='services'   >
       <div className="jais-port__services-title">
         <div className="stroke__title">
           <h1>My Services</h1>
@@ -44,7 +44,7 @@ const Services = () => {
         }
       </div>
       
-    </motion.section>
+    </section>
   )
 }
 
