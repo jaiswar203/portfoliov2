@@ -41,8 +41,6 @@ const Navbar = ({ winWidth }) => {
         },
     ]
     useEffect(() => {
-
-
         window.onscroll = (() => {
             if (window.pageYOffset >= 66) {
                 headerRef.current.classList.add("sticky")
@@ -50,9 +48,6 @@ const Navbar = ({ winWidth }) => {
                 headerRef.current.classList.remove("sticky");
             }
         })
-
-        const sections = document.querySelectorAll("section")
-        // const 
 
     }, [initialLink, isMenuOpen])
 

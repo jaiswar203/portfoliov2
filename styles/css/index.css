@@ -504,7 +504,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .jais-port__technology {
-  margin-top: 5rem;
+  margin: 5rem 0;
   font-family: "Playfair Display", serif;
 }
 .jais-port__technology-title {
@@ -556,7 +556,8 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   height: 100%;
 }
-.jais-port__technology-content .desktop .swiper-button-next, .jais-port__technology-content .desktop .swiper-button-prev {
+.jais-port__technology-content .desktop .swiper-button-next,
+.jais-port__technology-content .desktop .swiper-button-prev {
   color: #d90429;
 }
 @media screen and (max-width: 700px) {
@@ -597,6 +598,177 @@ body::-webkit-scrollbar-thumb {
     font-size: 2rem;
   }
   .jais-port__technology .detail {
+    font-size: 1rem;
+    bottom: 0.3rem;
+  }
+}
+.jais-port__project {
+  font-family: "Playfair Display", serif;
+  background: rgb(239, 239, 239);
+  border-radius: 5px;
+}
+.jais-port__project-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.jais-port__project-title .stroke__title {
+  font-size: 4rem;
+}
+.jais-port__project-title .stroke__title h1 {
+  opacity: 0.07;
+  color: white;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 1px;
+}
+.jais-port__project-title .detail {
+  position: absolute;
+  font-family: "Space Grotesk", sans-serif;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+.jais-port__project-content {
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+.jais-port__project-content .card {
+  width: 25rem;
+  width: 100%;
+  padding: 1rem;
+  background: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.jais-port__project-content .card__image {
+  cursor: pointer;
+  position: relative;
+}
+.jais-port__project-content .card__image .screen {
+  position: absolute;
+  top: 0;
+  border-radius: 5px;
+  width: 100%;
+  bottom: 0;
+}
+.jais-port__project-content .card__image img {
+  border-radius: 5px !important;
+  height: 100% !important;
+  filter: grayscale(100%);
+}
+.jais-port__project-content .card:hover img {
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(0);
+}
+.jais-port__project-content .card__detail {
+  padding: 1rem;
+}
+.jais-port__project-content .card__info {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Space Grotesk", sans-serif;
+  flex-direction: column;
+}
+.jais-port__project-content .card a {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+.jais-port__project-content .card__btn {
+  margin-top: 1rem;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+}
+.jais-port__project-content .card__btn p {
+  font-weight: 600;
+}
+.jais-port__project-content .card__btn:hover {
+  transition: all 0.5s ease-in-out;
+  border: 1px solid #d90429;
+  background: #d90429;
+  color: white;
+}
+@media screen and (min-width: 2300px) {
+  .jais-port__project-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 1260px) {
+  .jais-port__project-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 930px) {
+  .jais-port__project-content {
+    padding: 5rem 2rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .jais-port__project-content {
+    padding: 5rem 1rem;
+  }
+}
+@media screen and (max-width: 630px) {
+  .jais-port__project-content {
+    padding: 5rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  .jais-port__project-content {
+    padding: 3rem 2rem;
+  }
+}
+.jais-port__project-load {
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jais-port__project-load .btn,
+.jais-port__project-load .less__btn {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+}
+.jais-port__project-load .btn:hover,
+.jais-port__project-load .less__btn:hover {
+  transition: all 0.5s ease-in-out;
+  border: 1px solid #d90429;
+  background: #d90429;
+  color: white;
+}
+@media screen and (max-width: 900px) {
+  .jais-port__project-title .stroke__title {
+    font-size: 3rem;
+  }
+  .jais-port__project-title .detail {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .jais-port__project .stroke__title {
+    font-size: 2rem;
+  }
+  .jais-port__project .detail {
     font-size: 1rem;
     bottom: 0.3rem;
   }
