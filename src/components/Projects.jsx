@@ -7,6 +7,7 @@ import { data } from '../../db/data';
 
 const Projects = ({ winWidth }) => {
   const [sliceNum, setSliceNum] = useState(winWidth <= 1260 ? 2 : 3)
+  const [readMore, setReadMore] = useState(false)
   function shorten(str, maxLen, separator = ' ') {
     if (str.length <= maxLen) return str;
     return str.substr(0, str.lastIndexOf(separator, maxLen));
@@ -16,7 +17,7 @@ const Projects = ({ winWidth }) => {
     // window.addEventListener("scroll",()=>{
     //   window.location.hash=""
     // })
-  }, [sliceNum])
+  }, [sliceNum,readMore])
 
   const loadMore = () => {
     if (winWidth <= 1260) {
@@ -33,10 +34,10 @@ const Projects = ({ winWidth }) => {
       setSliceNum(3)
     }
   }
-
+  
   
   return (
-    <div className="jais-port__project" id='projects'>
+    <section className="jais-port__project" id='projects'>
       <div className="jais-port__project-title">
         <div className="stroke__title">
           <h1>Projects</h1>
@@ -60,10 +61,10 @@ const Projects = ({ winWidth }) => {
                     {shorten(item.description, 90, " ")}
                   </p>
                   <a href={`https://${item.link}`} rel="noreferrer" target="__blank">
-                    <div className="card__btn" >
+                    <motion.div className="card__btn" whileTap={{scale:0.97}}>
                       <p>Open</p>
                       <HiOutlineExternalLink style={{ marginLeft: 4 }} />
-                    </div>
+                    </motion.div>
                   </a>
                 </div>
               </div>
@@ -85,7 +86,7 @@ const Projects = ({ winWidth }) => {
           )
         }
       </div>
-    </div>
+    </section>
   )
 }
 

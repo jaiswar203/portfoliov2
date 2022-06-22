@@ -48,7 +48,14 @@ const Navbar = ({ winWidth }) => {
                 headerRef.current.classList.remove("sticky");
             }
         })
-
+        const sections=document.querySelectorAll("section")
+        console.log(sections)
+        // window.addEventListener("",()=>{
+        //     sections.forEach(item=>{
+        //         window.location.hash=`#${item.id}`
+        //     })
+        // })
+        console.log(window)
     }, [initialLink, isMenuOpen])
 
     function childOfNavbar() {
@@ -79,7 +86,7 @@ const Navbar = ({ winWidth }) => {
 
     return (
         <div className="jais-port__navbar" ref={headerRef}>
-            <div className="jais-port__navbar-logo">
+            <div className="jais-port__navbar-logo" onClick={()=>scrollTo(({top:0}))}>
                 <h1>Jais<span>Folio</span></h1>
             </div>
             {

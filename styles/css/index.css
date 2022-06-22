@@ -681,6 +681,10 @@ body::-webkit-scrollbar-thumb {
   font-family: "Space Grotesk", sans-serif;
   flex-direction: column;
 }
+.jais-port__project-content .card__info span {
+  color: #d90429;
+  font-weight: 600;
+}
 .jais-port__project-content .card a {
   text-decoration: none;
   color: inherit;
@@ -734,7 +738,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 500px) {
   .jais-port__project-content {
-    padding: 3rem 2rem;
+    padding: 3rem 1rem;
   }
 }
 .jais-port__project-load {

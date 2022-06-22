@@ -641,6 +641,10 @@
           @include center__element;
           @include normal_font;
           flex-direction: column;
+          span{
+            color: $color4;
+            font-weight: 600;
+          }
         }
         a {
           text-decoration: none;
@@ -686,7 +690,7 @@
         grid-template-columns: repeat(1, 1fr);
       }
       @media screen and (max-width: 500px) {
-        padding: 3rem 2rem;
+        padding: 3rem 1rem;
       }
     }
 
