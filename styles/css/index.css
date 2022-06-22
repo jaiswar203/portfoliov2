@@ -776,4 +776,96 @@ body::-webkit-scrollbar-thumb {
     font-size: 1rem;
     bottom: 0.3rem;
   }
+}
+.jais-port__modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+}
+.jais-port__modal-inner {
+  padding: 1rem;
+  background: black;
+  z-index: 2;
+}
+.jais-port__footer {
+  font-family: "Playfair Display", serif;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: black;
+  color: white;
+}
+.jais-port__footer-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 25rem;
+}
+.jais-port__footer-heading h1 {
+  color: white;
+}
+.jais-port__footer-heading h1 span {
+  color: #d90429;
+}
+.jais-port__footer-heading p {
+  margin-top: 1rem;
+  font-family: "Space Grotesk", sans-serif;
+  text-align: center;
+}
+.jais-port__footer-content {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.jais-port__footer-content .connect {
+  width: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+}
+.jais-port__footer-content .connect .item {
+  cursor: pointer;
+}
+.jais-port__footer-content .connect .item svg {
+  color: #2b2d42;
+}
+.jais-port__footer-content .connect .item svg:hover {
+  color: #d90429;
+}
+.jais-port__footer-content .links {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jais-port__footer-content .links .item {
+  cursor: pointer;
+  color: #8d99ae;
+  margin-left: 2rem;
+}
+.jais-port__footer-content .links .item:first-child {
+  margin-left: 0;
+}
+.jais-port__footer-content .links .item:hover {
+  transition: all 0.5s ease-in-out;
+  color: #d90429;
+}
+.jais-port__loader {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }/*# sourceMappingURL=index.css.map */

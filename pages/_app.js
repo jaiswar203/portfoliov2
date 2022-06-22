@@ -1,11 +1,21 @@
-import '../styles/css/index.css'
-import { Provider } from 'react-redux'
-import { store } from '../redux/store'
+import "../styles/css/index.css";
+import { Provider } from "react-redux";
+import { store } from "../redux/store";
+import { useEffect, useState } from "react";
+import Loader from "../src/components/Loader";
 
 function MyApp({ Component, pageProps }) {
-  return <Provider store={store}>
-    <Component {...pageProps} />
-  </Provider>
+  const [showLoader, setShowLoader] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setShowLoader(false);
+    }, 1500);
+  }, [showLoader]);
+  return !showLoader ? (
+      <Component {...pageProps} />
+  ) : (
+    <Loader />
+  );
 }
 
-export default MyApp
+export default MyApp;

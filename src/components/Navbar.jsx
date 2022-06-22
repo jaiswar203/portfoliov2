@@ -48,14 +48,6 @@ const Navbar = ({ winWidth }) => {
                 headerRef.current.classList.remove("sticky");
             }
         })
-        const sections=document.querySelectorAll("section")
-        console.log(sections)
-        // window.addEventListener("",()=>{
-        //     sections.forEach(item=>{
-        //         window.location.hash=`#${item.id}`
-        //     })
-        // })
-        console.log(window)
     }, [initialLink, isMenuOpen])
 
     function childOfNavbar() {
@@ -90,13 +82,13 @@ const Navbar = ({ winWidth }) => {
                 <h1>Jais<span>Folio</span></h1>
             </div>
             {
-                winWidth < 820 && (
+                winWidth < 820 ? (
                     <div className="jais-port__navbar-menu">
                         {
                             isMenuOpen ? <RiCloseLine size={30} onClick={() => setisMenuOpen(false)} /> : <RiMenu3Line size={30} onClick={() => setisMenuOpen(true)} />
                         }
                     </div>
-                )
+                ): null
             }
             {winWidth < 820 ? isMenuOpen && (
                 <motion.div className="jais-port__navbar-item" initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }}>

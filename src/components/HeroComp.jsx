@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 import AnimatedGif from "../../illustrations/animated.gif"
 
 import Typewriter from 'typewriter-effect'
-import { useEffect } from 'react'
 
 const HeroComp = ({winWidth}) => {
   function isSmall(){
@@ -32,7 +31,7 @@ const HeroComp = ({winWidth}) => {
         </div>
       </div>
       <motion.div className="jais-port__hero-image" initial={{ x: isSmall() ? 0 :  100,y:isSmall ? 100 :0, opacity: 0 }} animate={{ x: 0,y:0 , opacity: 1 }} transition={{ duration: 1 }}>
-        <Image src={AnimatedGif} width={700} height={700} />
+        <Image src={AnimatedGif} width={700} height={700}  priority={true} />
       </motion.div>
     </section>
   )

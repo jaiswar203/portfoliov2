@@ -2,22 +2,29 @@ import React, { useState } from 'react'
 import dynamic from "next/dynamic"
 import { useEffect } from 'react'
 
-import { Navbar, HeroComp, About, Services, Projects, Contact, Footer } from '../src/components'
+import PopUp from '../src/components/modal/PopUp'
 
+import {Navbar} from "../src/components"
+// const Navbar = dynamic(() => import("../src/components/Navbar"))
 const Technologies = dynamic(() => import("../src/components/Technologies"), { ssr: false })
+const HeroComp = dynamic(() => import("../src/components/HeroComp"))
+const About = dynamic(() => import("../src/components/About"))
+const Services = dynamic(() => import("../src/components/Services"))
+const Projects = dynamic(() => import("../src/components/Projects"))
+const Footer = dynamic(() => import("../src/components/Footer"))
 
 const Index = () => {
   const [winWidth, setWinWidth] = useState(0)
   const [showProjects, setShowProjects] = useState(false)
+  const [modal, setModal] = useState(false)
 
   useEffect(() => {
     setWinWidth(window.innerWidth)
     setShowProjects(true)
-  }, [winWidth,showProjects])
+  }, [winWidth, showProjects, modal])
 
   return (
     <>
-      {/* <CustomCursor /> */}
       <Navbar winWidth={winWidth} />
       <div className="jais-port">
         <HeroComp winWidth={winWidth} />
@@ -27,12 +34,16 @@ const Index = () => {
         {
           showProjects && (
             <Projects winWidth={winWidth} />
-
           )
         }
-        {/* <Contact />
-        <Footer /> */}
+        {/* <Contact /> */}
       </div>
+      <Footer />
+      {
+        modal && (
+          <PopUp />
+        )
+      }
     </>
   )
 }
