@@ -14,15 +14,15 @@ const Projects = ({ winWidth }) => {
   }
 
   useEffect(() => {
-    // window.addEventListener("scroll",()=>{
-    //   window.location.hash=""
-    // })
   }, [sliceNum,readMore])
 
   const loadMore = () => {
     if (winWidth <= 1260) {
       setSliceNum(prev => prev + 2)
-    } else {
+    }else if(winWidth<=630){
+      setSliceNum(prev=>prev+3)
+    }
+     else {
       setSliceNum(prev => prev + 3)
     }
   }

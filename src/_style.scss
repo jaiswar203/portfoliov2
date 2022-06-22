@@ -755,7 +755,6 @@
     flex-direction: column;
     background: black;
     color: white;
-    
 
     &-heading {
       @include center__element;
@@ -786,13 +785,12 @@
         justify-content: space-between;
         font-size: 2rem;
 
-        .item{
-
-         cursor: pointer; 
-          svg{
+        .item {
+          cursor: pointer;
+          svg {
             color: $color5;
-            
-            &:hover{
+
+            &:hover {
               color: $color4;
             }
           }
@@ -810,17 +808,29 @@
             margin-left: 0;
           }
 
-          &:hover{
-            transition: all .5s ease-in-out;
+          &:hover {
+            transition: all 0.5s ease-in-out;
             color: $color4;
+          }
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .connect{
+          width: 100%;
+        }
+        .links {
+          flex-wrap: wrap;
+
+          .item {
+            margin-left: 0;
+            margin-right: 1rem;
           }
         }
       }
     }
   }
 
-
-  &__loader{
+  &__loader {
     background: black;
     @include center__element;
     height: 100vh;
