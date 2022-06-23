@@ -26,7 +26,8 @@ export default async function(req,res){
     const emailRes=await transporter.sendMail(mailData)
     res.status(201).json({message:"Email Sent",data: emailRes})
   } catch (error) {
-    res.status(501).json({message:"Error Occured"})
+    console.log(error)
+    res.status(501).json({message:"Error Occured",error})
     
   }
 }

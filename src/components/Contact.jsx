@@ -16,7 +16,7 @@ const Contact = () => {
       if(data.status===201) reset()
     }).catch((err) => {
       if (err.response.status === 501) {
-        setShowModal({ ...showModal,modal:true,isSuccess:false, message: "Sorry, Message Failed to Send<", subMessage: "Some error Occured while sending the message, click on below button to try again." })
+        setShowModal({ ...showModal,modal:true,isSuccess:false, message: "Sorry, Message Failed to Send", subMessage: "Some error Occured while sending the message, click on below button to try again." })
       }
     })
 
