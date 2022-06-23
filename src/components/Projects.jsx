@@ -4,9 +4,10 @@ import { HiOutlineExternalLink } from "react-icons/hi"
 import {motion} from "framer-motion"
 
 import { data } from '../../db/data';
+import { useMemo } from 'react';
 
 const Projects = ({ winWidth }) => {
-  const [sliceNum, setSliceNum] = useState(winWidth <= 1260 ? 2 : 3)
+  const [sliceNum, setSliceNum] = useState(winWidth <= 1260 ? winWidth <=500 ? 3 : 2 : 3)
   const [readMore, setReadMore] = useState(false)
   function shorten(str, maxLen, separator = ' ') {
     if (str.length <= maxLen) return str;
@@ -34,7 +35,6 @@ const Projects = ({ winWidth }) => {
       setSliceNum(3)
     }
   }
-  
   
   return (
     <section className="jais-port__project" id='projects'>

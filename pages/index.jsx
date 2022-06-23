@@ -4,14 +4,15 @@ import { useEffect } from 'react'
 
 import PopUp from '../src/components/modal/PopUp'
 
-import {Navbar} from "../src/components"
-// const Navbar = dynamic(() => import("../src/components/Navbar"))
+import { Navbar } from "../src/components"
+
 const Technologies = dynamic(() => import("../src/components/Technologies"), { ssr: false })
 const HeroComp = dynamic(() => import("../src/components/HeroComp"))
 const About = dynamic(() => import("../src/components/About"))
 const Services = dynamic(() => import("../src/components/Services"))
 const Projects = dynamic(() => import("../src/components/Projects"))
 const Footer = dynamic(() => import("../src/components/Footer"))
+const Contact = dynamic(() => import("../src/components/Contact"))
 
 const Index = () => {
   const [winWidth, setWinWidth] = useState(0)
@@ -21,8 +22,11 @@ const Index = () => {
   useEffect(() => {
     setWinWidth(window.innerWidth)
     setShowProjects(true)
+
+
   }, [winWidth, showProjects, modal])
 
+  
   return (
     <>
       <Navbar winWidth={winWidth} />
@@ -36,7 +40,7 @@ const Index = () => {
             <Projects winWidth={winWidth} />
           )
         }
-        {/* <Contact /> */}
+        <Contact />
       </div>
       <Footer />
       {

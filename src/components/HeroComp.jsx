@@ -3,10 +3,12 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 import AnimatedGif from "../../illustrations/animated.gif"
+import { useRouter } from 'next/router'
 
 import Typewriter from 'typewriter-effect'
 
 const HeroComp = ({winWidth}) => {
+  const router=useRouter()
   function isSmall(){
     if(winWidth<=820){
       return true
@@ -25,7 +27,7 @@ const HeroComp = ({winWidth}) => {
           <p>Got Some Idea for your next <span>Project</span>?</p>
         </div>
         <div className="jais-port__hero-contact">
-          <motion.div className="btn" whileTap={{ scale: 0.95 }}>
+          <motion.div className="btn" whileTap={{ scale: 0.95 }} onClick={()=>router.push("#contact")} >
             <h3>Let&lsquo;s Talk</h3>
           </motion.div>
         </div>

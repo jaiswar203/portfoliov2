@@ -28,7 +28,7 @@ const About = ({winWidth}) => {
           </div>
           <div className="hire__btn">
             <motion.div className="btn" whileTap={{scale:0.95}}>
-              <BiDownload size={ winWidth < 500 ? 25 : 30} />
+              <BiDownload size={ 25} />
               <h3>Resume</h3>
             </motion.div>
           </div>

@@ -330,13 +330,14 @@ body::-webkit-scrollbar-thumb {
   justify-content: flex-start;
 }
 .jais-port__about-content__detail .hire__btn .btn {
+  font-size: 1rem;
   cursor: pointer;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
   width: 10rem;
   background: #d90429;
@@ -603,6 +604,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .jais-port__project {
+  margin: 5rem 0;
   font-family: "Playfair Display", serif;
   background: rgb(239, 239, 239);
   border-radius: 5px;
@@ -777,22 +779,148 @@ body::-webkit-scrollbar-thumb {
     bottom: 0.3rem;
   }
 }
-.jais-port__modal {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
+.jais-port__contact {
+  margin: 5rem 0;
+  font-family: "Playfair Display", serif;
+}
+.jais-port__contact-title {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 0;
-  left: 0;
+  flex-direction: column;
 }
-.jais-port__modal-inner {
-  padding: 1rem;
+.jais-port__contact-title .stroke__title {
+  font-size: 4rem;
+}
+.jais-port__contact-title .stroke__title h1 {
+  opacity: 0.07;
+  color: white;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 1px;
+}
+.jais-port__contact-title .detail {
+  position: absolute;
+  font-family: "Space Grotesk", sans-serif;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+.jais-port__contact-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.jais-port__contact-content .upper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3rem 0;
+  width: 42rem;
+}
+.jais-port__contact-content .upper__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 20rem;
+}
+.jais-port__contact-content .upper__item p {
+  color: black;
+  margin-left: 0.1rem;
+  font-weight: 600;
+}
+.jais-port__contact-content .upper__item input {
+  font-family: "Space Grotesk", sans-serif;
+  margin-top: 0.4rem;
+  border: 1px solid black;
+  width: 100%;
+  padding: 1rem 2rem 1rem 1rem;
+  font-size: 1.05rem;
+}
+.jais-port__contact-content .bottom {
+  width: 42rem;
+}
+.jais-port__contact-content .bottom p {
+  color: black;
+  font-weight: 600;
+  margin-left: 0.1rem;
+}
+.jais-port__contact-content .bottom textarea {
+  font-family: "Space Grotesk", sans-serif;
+  resize: none;
+  font-family: inherit;
+  margin-top: 0.4rem;
+  border: 1px solid black;
+  width: 100%;
+  padding: 1rem 2rem 1rem 1rem;
+  font-size: 1.05rem;
+}
+.jais-port__contact-content .submit {
+  cursor: pointer;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: black;
-  z-index: 2;
+  background: #d90429;
+  width: 10rem;
+  padding: 0.7rem 1rem;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 3px;
+  color: white;
+}
+@media screen and (max-width: 710px) {
+  .jais-port__contact-content .upper,
+.jais-port__contact-content .bottom {
+    width: 100%;
+  }
+  .jais-port__contact-content .upper__item:last-child {
+    margin-left: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .jais-port__contact-content .upper {
+    flex-direction: column;
+    margin: 3rem 0 1rem;
+  }
+  .jais-port__contact-content .upper__item {
+    width: 100%;
+  }
+  .jais-port__contact-content .upper__item:last-child {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .jais-port__contact-content .submit {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .jais-port__contact-title .stroke__title {
+    font-size: 3rem;
+  }
+  .jais-port__contact-title .detail {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .jais-port__contact .stroke__title {
+    font-size: 2.4rem;
+  }
+  .jais-port__contact .detail {
+    font-size: 1rem;
+    bottom: 0.3rem;
+  }
 }
 .jais-port__footer {
+  margin-top: 5rem;
   font-family: "Playfair Display", serif;
   padding: 1rem;
   display: flex;
@@ -819,6 +947,11 @@ body::-webkit-scrollbar-thumb {
   margin-top: 1rem;
   font-family: "Space Grotesk", sans-serif;
   text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .jais-port__footer-heading {
+    width: 100%;
+  }
 }
 .jais-port__footer-content {
   margin-top: 2rem;
@@ -862,9 +995,10 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.5s ease-in-out;
   color: #d90429;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 530px) {
   .jais-port__footer-content .connect {
     width: 100%;
+    justify-content: space-around;
   }
   .jais-port__footer-content .links {
     flex-wrap: wrap;
@@ -873,6 +1007,21 @@ body::-webkit-scrollbar-thumb {
     margin-left: 0;
     margin-right: 1rem;
   }
+}
+.jais-port__modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+}
+.jais-port__modal-inner {
+  padding: 1rem;
+  background: black;
+  z-index: 2;
 }
 .jais-port__loader {
   background: black;
