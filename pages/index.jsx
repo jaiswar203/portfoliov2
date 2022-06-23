@@ -4,7 +4,6 @@ import { useEffect } from 'react'
 
 import { Navbar } from "../src/components"
 
-// 
 const Technologies = dynamic(() => import("../src/components/Technologies"), { ssr: false })
 const HeroComp = dynamic(() => import("../src/components/HeroComp"))
 const About = dynamic(() => import("../src/components/About"))
