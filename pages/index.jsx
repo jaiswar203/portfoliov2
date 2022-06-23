@@ -17,12 +17,11 @@ const Contact = dynamic(() => import("../src/components/Contact"))
 const Index = () => {
   const [winWidth, setWinWidth] = useState(0)
   const [showProjects, setShowProjects] = useState(false)
-  const [modal, setModal] = useState(false)
+  const [modal, setModal] = useState(true)
 
   useEffect(() => {
     setWinWidth(window.innerWidth)
     setShowProjects(true)
-
 
   }, [winWidth, showProjects, modal])
 
@@ -43,11 +42,11 @@ const Index = () => {
         <Contact />
       </div>
       <Footer />
-      {
+      {/* {
         modal && (
           <PopUp />
         )
-      }
+      } */}
     </>
   )
 }

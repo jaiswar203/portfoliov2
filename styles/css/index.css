@@ -920,7 +920,6 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .jais-port__footer {
-  margin-top: 5rem;
   font-family: "Playfair Display", serif;
   padding: 1rem;
   display: flex;
@@ -1012,16 +1011,89 @@ body::-webkit-scrollbar-thumb {
   position: fixed;
   width: 100%;
   height: 100vh;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   top: 0;
+  z-index: 12;
   left: 0;
 }
+.jais-port__modal-cancel {
+  position: absolute;
+  right: -0.5rem;
+  top: -0.5rem;
+}
 .jais-port__modal-inner {
-  padding: 1rem;
-  background: black;
+  position: relative;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  background: white;
+  box-shadow: 0 0 5px black;
   z-index: 2;
+}
+.jais-port__modal-inner .success, .jais-port__modal-inner .error {
+  font-family: "Space Grotesk", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  flex-direction: column;
+}
+.jais-port__modal-inner .success__content, .jais-port__modal-inner .error__content {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.jais-port__modal-inner .success__content .message, .jais-port__modal-inner .error__content .message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.jais-port__modal-inner .success__content .message p, .jais-port__modal-inner .error__content .message p {
+  margin-top: 0.2rem;
+}
+.jais-port__modal-inner .success__content .btn, .jais-port__modal-inner .error__content .btn {
+  cursor: pointer;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #d90429;
+  color: white;
+  border-radius: 4px;
+}
+.jais-port__modal-inner .error__content {
+  width: 25rem;
+}
+.jais-port__modal-inner .error__content p {
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .jais-port__modal-inner .error {
+    font-size: 0.9rem;
+  }
+  .jais-port__modal-inner .error__content {
+    width: 100%;
+  }
+  .jais-port__modal-inner .error__content h2 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .jais-port__modal-inner {
+    padding: 1rem;
+    margin: 0 1rem;
+  }
+  .jais-port__modal-inner .success, .jais-port__modal-inner .error {
+    padding: 1rem;
+  }
+  .jais-port__modal-inner .success__content, .jais-port__modal-inner .error__content {
+    font-size: 0.9rem;
+  }
 }
 .jais-port__loader {
   background: black;
