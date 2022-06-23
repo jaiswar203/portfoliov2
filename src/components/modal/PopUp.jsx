@@ -11,7 +11,7 @@ const PopUp = ({ success = true, setHandler, error, message, subMessage }) => {
                     <FaTimesCircle size={30} color="red" />
                 </div>
                 {
-                    success && (
+                    success  && (
                         <div className="success">
                             <div className="success__icon">
                                 <Image src={"/success.png"} width={100} height={100} />
@@ -29,7 +29,7 @@ const PopUp = ({ success = true, setHandler, error, message, subMessage }) => {
                     )
                 }
                 {
-                    error && (
+                    error  && (
                         <div className="error">
                             <div className="error__icon">
                                 <Image src={"/error.png"} width={100} height={100} />

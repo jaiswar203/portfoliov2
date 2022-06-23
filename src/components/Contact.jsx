@@ -12,9 +12,11 @@ const Contact = () => {
   const submitHandler = async (formData) => {
     // console("s")
     axios.post("/api/mail", formData).then((data) => {
-      setShowModal({ ...showModal,modal:true, message: "Message Sent Successfully!", subMessage: "I got the message, I will get to you within 24hr." })
+      console.log("succ",data)
+      setShowModal({ ...showModal,isSuccess:true,modal:true, message: "Message Sent Successfully!", subMessage: "I got the message, I will get to you within 24hr." })
       if(data.status===201) reset()
     }).catch((err) => {
+      console.log("error",err)
       if (err.response.status === 501) {
         setShowModal({ ...showModal,modal:true,isSuccess:false, message: "Sorry, Message Failed to Send", subMessage: "Some error Occured while sending the message, click on below button to try again." })
       }
