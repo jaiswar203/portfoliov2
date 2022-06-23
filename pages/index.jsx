@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import dynamic from "next/dynamic"
 import { useEffect } from 'react'
 
-import PopUp from '../src/components/modal/PopUp'
-
 import { Navbar } from "../src/components"
 
 const Technologies = dynamic(() => import("../src/components/Technologies"), { ssr: false })
@@ -17,13 +15,13 @@ const Contact = dynamic(() => import("../src/components/Contact"))
 const Index = () => {
   const [winWidth, setWinWidth] = useState(0)
   const [showProjects, setShowProjects] = useState(false)
-  const [modal, setModal] = useState(true)
+  
 
   useEffect(() => {
     setWinWidth(window.innerWidth)
     setShowProjects(true)
 
-  }, [winWidth, showProjects, modal])
+  }, [winWidth, showProjects])
 
   
   return (
@@ -42,11 +40,6 @@ const Index = () => {
         <Contact />
       </div>
       <Footer />
-      {/* {
-        modal && (
-          <PopUp />
-        )
-      } */}
     </>
   )
 }
