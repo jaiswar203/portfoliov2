@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import AnimatedGif from "../../illustrations/animated.gif"
 import { useRouter } from 'next/router'
 
-import Typewriter from 'typewriter-effect'
+// import Typewriter from 'typewriter-effect'
 
 const HeroComp = ({winWidth}) => {
   const router=useRouter()

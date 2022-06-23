@@ -20,8 +20,7 @@
     "react-icons": "^4.4.0",
     "react-loader-spinner": "^5.1.5",
     "react-use-downloader": "^1.1.7",
-    "swiper": "^8.2.4",
-    "typewriter-effect": "^2.18.2"
+    "swiper": "^8.2.4"
   },
   "devDependencies": {
     "eslint": "8.17.0",
