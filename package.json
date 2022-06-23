@@ -9,8 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/bundle-analyzer": "^12.1.6",
-    "@reduxjs/toolkit": "^1.8.2",
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "framer-motion": "^6.3.11",
@@ -21,7 +19,6 @@
     "react-hook-form": "^7.32.2",
     "react-icons": "^4.4.0",
     "react-loader-spinner": "^5.1.5",
-    "react-redux": "^8.0.2",
     "react-use-downloader": "^1.1.7",
     "swiper": "^8.2.4",
     "typewriter-effect": "^2.18.2"

@@ -1,6 +1,4 @@
 import "../styles/css/index.css";
-import { Provider } from "react-redux";
-import { store } from "../redux/store";
 import { useEffect, useState } from "react";
 import Loader from "../src/components/Loader";
 
