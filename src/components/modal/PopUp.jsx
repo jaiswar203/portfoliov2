@@ -14,7 +14,7 @@ const PopUp = ({ success = true, setHandler, error, message, subMessage,downlaod
                     success  && (
                         <div className="success">
                             <div className="success__icon">
-                                <Image src={"/success.png"} width={100} height={100} />
+                                <Image src={"/success.png"} width={100} height={100} alt="Success Image" />
                             </div>
                             <div className="success__content">
                                 <div className="message">
@@ -32,7 +32,7 @@ const PopUp = ({ success = true, setHandler, error, message, subMessage,downlaod
                     error  && (
                         <div className="error">
                             <div className="error__icon">
-                                <Image src={"/error.png"} width={100} height={100} />
+                                <Image src={"/error.png"} width={100} height={100} alt="Error Image" />
                             </div>
                             <div className="error__content">
                                 <div className="message">
@@ -50,7 +50,7 @@ const PopUp = ({ success = true, setHandler, error, message, subMessage,downlaod
                     downlaod && (
                         <div className="download">
                             <div className="download__icon">
-                                <Image src={"/download.png"} width={100} height={100}  />
+                                <Image src={"/download.png"} width={100} height={100}  alt="Download Image" />
                             </div>
                             <div className="download__content">
                                 <p>Click Below Download Button to Download My Resume</p>

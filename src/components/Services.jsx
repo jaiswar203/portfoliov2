@@ -35,7 +35,7 @@ const Services = () => {
               <div className="item__outer">
                 <div className="shell" />
                 <div className="img">
-                  <Image src={item.item} width={64} height={64} />
+                  <Image src={item.item} width={64} height={64} alt={item.name} />
                 </div>
               </div>
               <h2>{item.name}</h2>

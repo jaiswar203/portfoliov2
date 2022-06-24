@@ -5,8 +5,6 @@ import { motion } from 'framer-motion'
 import AnimatedGif from "../../illustrations/animated.gif"
 import { useRouter } from 'next/router'
 
-// import Typewriter from 'typewriter-effect'
-
 const HeroComp = ({winWidth}) => {
   const router=useRouter()
   function isSmall(){
@@ -20,7 +18,6 @@ const HeroComp = ({winWidth}) => {
         <div className="line1">
           <h2>Hello There,</h2>
           <h1>I am <span>
-            {/* <Typewriter options={{ strings: ["Nilesh Jaiswar.", "A Web Developer."], autoStart: true, loop: true }} /> */}
             Nilesh Jaiswar.
           </span></h1>
           <p>I am a Full-Stack Developer, Basically MERN Stack and Next JS Developer. Based in <span>Mumbai</span>.</p>
@@ -33,7 +30,7 @@ const HeroComp = ({winWidth}) => {
         </div>
       </div>
       <motion.div className="jais-port__hero-image" initial={{ x: isSmall() ? 0 :  100,y:isSmall ? 100 :0, opacity: 0 }} animate={{ x: 0,y:0 , opacity: 1 }} transition={{ duration: 1 }}>
-        <Image src={AnimatedGif} width={700} height={700}  priority={true} />
+        <Image src={AnimatedGif} width={700} height={700}  priority={true} alt="Gif" />
       </motion.div>
     </section>
   )

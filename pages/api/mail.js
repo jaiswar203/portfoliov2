@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer"
 import dotenv from "dotenv"
 
-export default async function(req,res){
+export default async function mail(req,res){
   dotenv.config({path:"/.env.local"})
   const transporter=nodemailer.createTransport({
     port:465,

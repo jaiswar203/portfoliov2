@@ -19,7 +19,7 @@ const About = ({setDownloadPopUp}) => {
       </div>
       <div className="jais-port__about-content">
         <div className="jais-port__about-content__image">
-          <Image src={AboutImage} width={600} height={600} />
+          <Image src={AboutImage} width={600} height={600} alt="Image" />
         </div>
         <div className="jais-port__about-content__detail">
           <div className="para">

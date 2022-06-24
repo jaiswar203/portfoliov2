@@ -51,7 +51,7 @@ const Projects = ({ winWidth }) => {
           data.slice(0, sliceNum).map((item,index) => (
             <motion.div className="card" key={item.name} initial={{y:50,opacity:0}} whileInView={{y:0,opacity:1}} viewport={{once:true}} transition={{delay: index<=2 ? index+0.5 : 0.5,duration:1 }} >
               <div className="card__image">
-                <Image src={item.img} width={1900} height={992} objectFit="cover" />
+                <Image src={item.img} width={1900} height={992} alt={item.name} objectFit="cover" />
                 <div className="screen" />
               </div>
               <div className="card__detail">
