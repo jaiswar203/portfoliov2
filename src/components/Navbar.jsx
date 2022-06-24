@@ -7,7 +7,7 @@ import { RiCloseLine, RiMenu3Line } from "react-icons/ri"
 import { BiDownload } from "react-icons/bi"
 import { GiPentarrowsTornado } from "react-icons/gi"
 
-const Navbar = ({ winWidth }) => {
+const Navbar = ({ winWidth,setDownloadPopUp }) => {
     const [initialLink, setInitialLink] = useState(0)
     const [isMenuOpen, setisMenuOpen] = useState(false)
     const headerRef = useRef()
@@ -93,7 +93,7 @@ const Navbar = ({ winWidth }) => {
             {winWidth < 820 ? isMenuOpen && (
                 <motion.div className="jais-port__navbar-item" initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }}>
                     {childOfNavbar()}
-                    <motion.div className="mobile__hire" whileTap={{ scale: 0.95 }}>
+                    <motion.div className="mobile__hire" whileTap={{ scale: 0.95 }} onClick={()=>setDownloadPopUp(true)}>
                         <BiDownload size={20} />
                         <h3>Resume</h3>
                     </motion.div>
@@ -103,7 +103,7 @@ const Navbar = ({ winWidth }) => {
                     {childOfNavbar()}
                 </div>
             )}
-            <motion.div className="jais-port__navbar-btn" whileTap={{ scale: 0.95 }} transition={{ duration: .2 }}>
+            <motion.div className="jais-port__navbar-btn" whileTap={{ scale: 0.95 }} transition={{ duration: .2 }} onClick={()=>setDownloadPopUp(true)}> 
                 <BiDownload size={20} />
                 <h3>Resume</h3>
             </motion.div>

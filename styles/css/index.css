@@ -1083,6 +1083,29 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
   }
 }
+.jais-port__modal-inner .download {
+  font-family: "Space Grotesk", sans-serif;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.jais-port__modal-inner .download__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+.jais-port__modal-inner .download__content .btn {
+  cursor: pointer;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #d90429;
+  color: white;
+  border-radius: 4px;
+}
 @media screen and (max-width: 500px) {
   .jais-port__modal-inner {
     padding: 1rem;
@@ -1096,7 +1119,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .jais-port__loader {
-  background: black;
+  background: white;
   display: flex;
   justify-content: center;
   align-items: center;

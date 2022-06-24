@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import AboutImage from "../../illustrations/about.gif"
 import { BiDownload } from "react-icons/bi"
 
-const About = ({winWidth}) => {
+const About = ({setDownloadPopUp}) => {
   return (
     <section className="jais-port__about" id='aboutme'>
       <div className="jais-port__about-title">
@@ -27,7 +27,7 @@ const About = ({winWidth}) => {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo corrupti impedit, tempora expedita molestias labore debitis a, officiis ad eligendi, fugiat totam? Illo natus suscipit ut ipsam consectetur sequi? Dolor.</p>
           </div>
           <div className="hire__btn">
-            <motion.div className="btn" whileTap={{scale:0.95}}>
+            <motion.div className="btn" whileTap={{scale:0.95}} onClick={()=>setDownloadPopUp(true)}>
               <BiDownload size={ 25} />
               <h3>Resume</h3>
             </motion.div>

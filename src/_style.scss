@@ -1045,6 +1045,27 @@
           }
         }
       }
+      
+      .download{
+        @include normal_font;
+        padding: 1rem;
+        @include center__element;
+        flex-direction: column;
+        
+        &__content{
+          @include center__element;
+          flex-direction: column;
+          margin-top: 1.5rem;
+          .btn{
+            cursor: pointer;
+            margin-top: 1rem;
+            padding: .5rem 1rem;
+            background: $color4;
+            color: white;
+            border-radius: 4px;
+          }
+        }
+      }
 
       @media screen and (max-width:500px) {
         padding: 1rem;
@@ -1062,7 +1083,7 @@
   }
 
   &__loader {
-    background: black;
+    background: white;
     @include center__element;
     height: 100vh;
   }

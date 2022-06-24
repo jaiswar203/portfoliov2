@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { motion } from "framer-motion"
 import { FaTimesCircle } from "react-icons/fa"
 
-const PopUp = ({ success = true, setHandler, error, message, subMessage }) => {
+const PopUp = ({ success = true, setHandler, error, message, subMessage,downlaod ,downlaodHand}) => {
     return (
         <div className="jais-port__modal">
             <div className="jais-port__modal-inner">
@@ -41,6 +41,21 @@ const PopUp = ({ success = true, setHandler, error, message, subMessage }) => {
                                 </div>
                                 <motion.div className="btn" onClick={() => setHandler(false)} whileTap={{ scale: 0.96 }}>
                                     <h3>Try Again</h3>
+                                </motion.div>
+                            </div>
+                        </div>
+                    )
+                }
+                {
+                    downlaod && (
+                        <div className="download">
+                            <div className="download__icon">
+                                <Image src={"/download.png"} width={100} height={100}  />
+                            </div>
+                            <div className="download__content">
+                                <p>Click Below Download Button to Download My Resume</p>
+                                <motion.div className="btn" onClick={downlaodHand} whileTap={{scale:0.96}} >
+                                    <h3>Download</h3>
                                 </motion.div>
                             </div>
                         </div>

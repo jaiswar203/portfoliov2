@@ -17,7 +17,7 @@ export const data = [
   },
   {
     id: 2,
-    name: "RedFluk Ecommerce",
+    name: "Ecommerce App",
     description:
       "A Ecommerce personal web app made with Next Js, Stripe Js, Sanity CMS.",
     link: "redflukecom.netlify.app",
@@ -25,7 +25,7 @@ export const data = [
   },
   {
     id: 3,
-    name: "RedFluk Gym App",
+    name: "Gym App",
     description:
       "A React 18 app with boost my knowledge of new React version. A lot new featueres, I got acquainted, while making this app.",
     link: "redflukgym.netlify.app",
@@ -33,7 +33,7 @@ export const data = [
   },
   {
     id: 4,
-    name: "RedFluk Movie App",
+    name: "Movie App",
     description: "A Movie Downloading made with MERN Stack, just made for fun and learning new things.",
     link: "redfluk.netlify.app",
     img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1633701631/Portpolio/redfluk_guvjii.webp",

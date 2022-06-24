@@ -9,22 +9,26 @@ const Footer = () => {
     {
       id: 0,
       name: "WhatsApp",
+      link:"https://wa.me/7715969989",
       item: <AiOutlineWhatsApp />
     },
     {
       id: 1,
       name: "LinkedIn",
+      link:"https://linkedin.com/in/jaiswarnilesh",
       item: <AiFillLinkedin />
     },
     {
       id: 2,
       name: "GitHub",
+      link:"https://github.com/jaiswar203",
       item: <AiOutlineGithub />
     },
     {
       id: 3,
       name: "Mail",
-      item: <AiOutlineMail />
+      item: <AiOutlineMail />,
+      link:"mailto:jaiswarnilesh2002@gmail.com"
     },
   ]
 
@@ -60,9 +64,9 @@ const Footer = () => {
         <div className="connect">
           {
             items.map((item) => (
-              <motion.div className="item" key={item.name} whileHover={{y:-10}}>
+              <motion.a target={"_blank"} href={item.link} className="item" key={item.name} whileHover={{y:-10}}>
                 {item.item}
-              </motion.div>
+              </motion.a>
             ))
           }
         </div>
