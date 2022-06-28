@@ -1,29 +1,25 @@
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import { HiOutlineExternalLink } from "react-icons/hi"
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 
 import { data } from '../../db/data';
 import { useMemo } from 'react';
 
 const Projects = ({ winWidth }) => {
-  const [sliceNum, setSliceNum] = useState(winWidth <= 1260 ? winWidth <=500 ? 3 : 2 : 3)
-  const [readMore, setReadMore] = useState(false)
-  function shorten(str, maxLen, separator = ' ') {
-    if (str.length <= maxLen) return str;
-    return str.substr(0, str.lastIndexOf(separator, maxLen));
-  }
-
+  const [sliceNum, setSliceNum] = useState(winWidth <= 1260 ? winWidth <= 500 ? 3 : 2 : 3)
+  const [readMore, setReadMore] = useState({id:null,show:false})
+  
   useEffect(() => {
-  }, [sliceNum,readMore])
+  }, [sliceNum, readMore])
 
   const loadMore = () => {
     if (winWidth <= 1260) {
       setSliceNum(prev => prev + 2)
-    }else if(winWidth<=630){
-      setSliceNum(prev=>prev+3)
+    } else if (winWidth <= 630) {
+      setSliceNum(prev => prev + 3)
     }
-     else {
+    else {
       setSliceNum(prev => prev + 3)
     }
   }
@@ -35,7 +31,33 @@ const Projects = ({ winWidth }) => {
       setSliceNum(3)
     }
   }
-  
+
+  const readMoreHandler=(index,item,less=false)=>{
+    if(less) return setReadMore({show:false,id:null})
+    
+    if(index===item.id){
+      setReadMore({...readMore,show:true,id:item.id})
+    }else{
+      setReadMore(false)
+    }
+  }
+
+  function shorten(str, maxLen, separator = ' ',index,item) {
+    if (str.length <= maxLen) return str;
+    return (
+      readMore.show && readMore.id===item.id ? (
+        <>
+          {str} <span onClick={()=>readMoreHandler(index,item,true)}>less</span>
+        </>
+      ): (
+        <>
+          {str.substr(0, str.lastIndexOf(separator, maxLen))} <span onClick={()=>readMoreHandler(index,item)}>more</span>
+        </>
+      )      
+    )
+  }
+
+  console.log({readMore})
   return (
     <section className="jais-port__project" id='projects'>
       <div className="jais-port__project-title">
@@ -48,8 +70,8 @@ const Projects = ({ winWidth }) => {
       </div>
       <motion.div className="jais-port__project-content">
         {
-          data.slice(0, sliceNum).map((item,index) => (
-            <motion.div className="card" key={item.name} initial={{y:50,opacity:0}} whileInView={{y:0,opacity:1}} viewport={{once:true}} transition={{delay: index<=2 ? index+0.5 : 0.5,duration:1 }} >
+          data.slice(0, sliceNum).map((item, index) => (
+            <motion.div className="card" key={item.name} initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ delay: index <= 2 ? index + 0.5 : 0.5, duration: 1 }} >
               <div className="card__image">
                 <Image src={item.img} width={1900} height={992} alt={item.name} objectFit="cover" />
                 <div className="screen" />
@@ -58,10 +80,10 @@ const Projects = ({ winWidth }) => {
                 <h2>{item.name}</h2>
                 <div className="card__info">
                   <p className='text'>
-                    {shorten(item.description, 90, " ")}
+                    {shorten(item.description, 90, " ",index,item)}
                   </p>
                   <a href={`https://${item.link}`} rel="noreferrer" target="__blank">
-                    <motion.div className="card__btn" whileTap={{scale:0.97}}>
+                    <motion.div className="card__btn" whileTap={{ scale: 0.97 }}>
                       <p>Open</p>
                       <HiOutlineExternalLink style={{ marginLeft: 4 }} />
                     </motion.div>

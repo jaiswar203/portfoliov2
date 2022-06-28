@@ -3,7 +3,7 @@ export const data = [
     id: 0,
     name: "ConnectMe",
     description:
-      "A LinkedIn like Web App to create your profile. This Project is made with Next Js, MongoDb, Express Js. Currently in first phase. This App support PWA",
+      "A LinkedIn like Web App to create your profile. This Project is made with Next Js, MongoDb, Express Js. Currently in first phase. This App support PWA.",
     link: "connectme.co.in",
     img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655781321/Portpolio/projects/connectme_lxfgof.png",
   },

@@ -685,6 +685,7 @@ body::-webkit-scrollbar-thumb {
 }
 .jais-port__project-content .card__info span {
   color: #d90429;
+  cursor: pointer;
   font-weight: 600;
 }
 .jais-port__project-content .card a {
