@@ -1,5 +1,5 @@
 import React from 'react'
-import { AiOutlineWhatsApp, AiFillLinkedin, AiOutlineGithub, AiOutlineMail } from "react-icons/ai"
+import { AiOutlineTwitter, AiFillLinkedin, AiOutlineGithub, AiOutlineMail } from "react-icons/ai"
 import {useRouter} from "next/router"
 import {motion} from "framer-motion"
 
@@ -9,8 +9,8 @@ const Footer = () => {
     {
       id: 0,
       name: "WhatsApp",
-      link:"https://wa.me/7715969989",
-      item: <AiOutlineWhatsApp />
+      link:"https://twitter.com/User82779817",
+      item: <AiOutlineTwitter />
     },
     {
       id: 1,
