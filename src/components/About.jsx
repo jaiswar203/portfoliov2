@@ -50,7 +50,7 @@ const About = ({ setDownloadPopUp,winWidth }) => {
         </div>
       </div>
       <div className="jais-port__about-content">
-        <motion.div className="jais-port__about-content__image" initial={{ x: isSmall() ? 0 :  -100 ,y:isSmall() ? 100 :0, opacity: 0}} whileInView={{x:0,y:0,opacity:1}} viewport={{once:true}} transition={{duration:1}}>
+        <motion.div className="jais-port__about-content__image" initial={{ x: isSmall() ? 0 :  -100 , opacity: 0}} whileInView={{x:0,y:0,opacity:1}} viewport={{once:true}} transition={{duration:1}}>
           <Image src={AboutImage} width={600} height={600} alt="Image" />
         </motion.div>
         <motion.div className="jais-port__about-content__detail" variants={container} initial="hidden" whileInView={"visible"} viewport={{once:true}}>
