@@ -57,7 +57,7 @@ const HeroComp = ({winWidth}) => {
           </motion.div>
         </div>
       </motion.div>
-      <motion.div className="jais-port__hero-image" initial={{ x: isSmall() ? 0 :  100,y:isSmall() ? 100 :0, opacity: 0 }} animate={{ x: 0,y:0 , opacity: 1 }} transition={{ duration: 1 }}>
+      <motion.div className="jais-port__hero-image" initial={{ x: isSmall() ? 0 :  100, opacity: 0 }} animate={{ x: 0,y:0 , opacity: 1 }} transition={{ duration: 1 }}>
         <Image src={AnimatedGif} width={700} height={700}  priority={true} alt="Gif" />
       </motion.div>
     </section>
