@@ -4,13 +4,13 @@ import { HiOutlineExternalLink } from "react-icons/hi"
 import { motion } from "framer-motion"
 
 import { data } from '../../db/data';
-import { useMemo } from 'react';
 
 const Projects = ({ winWidth }) => {
   const [sliceNum, setSliceNum] = useState(winWidth <= 1260 ? winWidth <= 500 ? 3 : 2 : 3)
   const [readMore, setReadMore] = useState({id:null,show:false})
   
   useEffect(() => {
+    
   }, [sliceNum, readMore])
 
   const loadMore = () => {
@@ -31,14 +31,21 @@ const Projects = ({ winWidth }) => {
       setSliceNum(3)
     }
   }
+  
+    const newArr=[]
+    data.map((item)=>{
+      newArr.unshift(item)
+    })
 
   const readMoreHandler=(index,item,less=false)=>{
     if(less) return setReadMore({show:false,id:null})
+    const arrLen=data.length-1
     
-    if(index===item.id){
-      setReadMore({...readMore,show:true,id:item.id})
+
+    if(item.id===arrLen-index){
+      setReadMore({show:true,id:item.id})
     }else{
-      setReadMore(false)
+      setReadMore({show:false,id:null})
     }
   }
 
@@ -57,7 +64,7 @@ const Projects = ({ winWidth }) => {
     )
   }
 
-  console.log({readMore})
+  
   return (
     <section className="jais-port__project" id='projects'>
       <div className="jais-port__project-title">
@@ -70,7 +77,7 @@ const Projects = ({ winWidth }) => {
       </div>
       <motion.div className="jais-port__project-content">
         {
-          data.slice(0, sliceNum).map((item, index) => (
+          newArr.slice(0, sliceNum).map((item, index) => (
             <motion.div className="card" key={item.name} initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ delay: index <= 2 ? index + 0.5 : 0.5, duration: 1 }} >
               <div className="card__image">
                 <Image src={item.img} width={1900} height={992} alt={item.name} objectFit="cover" />

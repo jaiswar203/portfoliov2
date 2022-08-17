@@ -1,35 +1,36 @@
 export const data = [
+  
   {
     id: 0,
-    name: "ConnectMe",
+    name: "Aman Acoustic",
     description:
-      "A LinkedIn like Web App to create your profile. This Project is made with Next Js, MongoDb, Express Js. Currently in first phase. This App support PWA.",
-    link: "connectme.co.in",
-    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655781321/Portpolio/projects/connectme_lxfgof.png",
+      "A Acoustic Frontend Application. This is the indutry based project",
+    link: "amanacoustic.com",
+    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655781327/Portpolio/projects/acoustic_wxjryl.png",
   },
   {
     id: 1,
-    name: "Redwine Digital",
+    name: "Frontend App",
     description:
-      "A Landing page for rediwne digital marketing made with NextJs, Framer Motion.",
-    link: "redwine.digital",
-    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655781323/Portpolio/projects/redwine_ojvhhj.png",
+    "A frontend application to enhance my frontend knowledge and skill.",
+    link: "triflix.netlify.app",
+    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655781323/Portpolio/projects/triflix_vpmkzf.png",
   },
   {
     id: 2,
-    name: "Ecommerce App",
+    name: "First MERN App",
     description:
-      "A Ecommerce personal web app made with Next Js, Stripe Js, Sanity CMS.",
-    link: "redflukecom.netlify.app",
-    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655781321/Portpolio/projects/redflukecom_vkws6u.png",
+    "As starting as new MERN stack, I started with this MERN social Application, Where we can create post,delete post,update post and much more.",
+    link: "new-mernapp.netlify.app",
+    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655781321/Portpolio/projects/mern_kgxf47.png",
   },
   {
     id: 3,
-    name: "Gym App",
+    name: "GPT Frontend",
     description:
-      "A React 18 app with boost my knowledge of new React version. A lot new featueres, I got acquainted, while making this app.",
-    link: "redflukgym.netlify.app",
-    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655781322/Portpolio/projects/redflukgym_qsdolf.png",
+    "A gpt 3 frontend appication made with Next Js. Created this to enhance my frontend skill.",
+    link: "new-gpt3.netlify.app",
+    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655781322/Portpolio/projects/gpt3_y2dlqq.png",
   },
   {
     id: 4,
@@ -40,34 +41,42 @@ export const data = [
   },
   {
     id: 5,
-    name: "GPT Frontend",
+    name: "Gym App",
     description:
-      "A gpt 3 frontend appication made with Next Js. Created this to enhance my frontend skill.",
-    link: "new-gpt3.netlify.app",
-    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655781322/Portpolio/projects/gpt3_y2dlqq.png",
+      "A React 18 app with boost my knowledge of new React version. A lot new featueres, I got acquainted, while making this app.",
+    link: "redflukgym.netlify.app",
+    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655781322/Portpolio/projects/redflukgym_qsdolf.png",
   },
   {
     id: 6,
-    name: "First MERN App",
+    name: "Ecommerce App",
     description:
-      "As starting as new MERN stack, I started with this MERN social Application, Where we can create post,delete post,update post and much more.",
-    link: "new-mernapp.netlify.app",
-    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655781321/Portpolio/projects/mern_kgxf47.png",
+    "A Ecommerce personal web app made with Next Js, Stripe Js, Sanity CMS.",
+    link: "redflukecom.netlify.app",
+    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655781321/Portpolio/projects/redflukecom_vkws6u.png",
   },
   {
     id: 7,
-    name: "Frontend App",
+    name: "Redwine Digital",
     description:
-      "A frontend application to enhance my frontend knowledge and skill.",
-    link: "triflix.netlify.app",
-    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655781323/Portpolio/projects/triflix_vpmkzf.png",
+      "A Landing page for rediwne digital marketing made with NextJs, Framer Motion.",
+    link: "redwine.digital",
+    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655781323/Portpolio/projects/redwine_ojvhhj.png",
   },
   {
     id: 8,
-    name: "Aman Acoustic",
+    name: "ConnectMe",
     description:
-      "A Acoustic Frontend Application. This is the indutry based project",
-    link: "amanacoustic.com",
-    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655781327/Portpolio/projects/acoustic_wxjryl.png",
+      "A LinkedIn like Web App to create your profile. This Project is made with Next Js, MongoDb, Express Js. Currently in first phase. This App support PWA.",
+    link: "connectme.co.in",
+    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655781321/Portpolio/projects/connectme_lxfgof.png",
+  },
+  {
+    id: 9,
+    name: "Rokye Realty",
+    description:
+      "A Real Estate Full Stack Website created with Next Js, Express Js, MongoDB, Framer Motion, Sass,etc. This is a full stack website with admin panel. This is just a development version url",
+    link: "rokye-gray.vercel.app",
+    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1660736249/Portpolio/Screenshot_43_ycc64x.png",
   },
 ];
