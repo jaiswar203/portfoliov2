@@ -76,7 +76,7 @@ export const data = [
     name: "Rokye Realty",
     description:
       "A Real Estate Full Stack Website created with Next Js, Express Js, MongoDB, Framer Motion, Sass,etc. This is a full stack website with admin panel. This is just a development version url",
-    link: "rokye-gray.vercel.app",
+    link: "rokye.com",
     img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1660736249/Portpolio/Screenshot_43_ycc64x.png",
   },
 ];
