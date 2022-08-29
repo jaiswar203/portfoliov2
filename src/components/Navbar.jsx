@@ -53,7 +53,7 @@ const Navbar = ({ winWidth,setDownloadPopUp }) => {
     function childOfNavbar() {
         return (
             links.map((item) => (
-                <Link href={`${item.link}`} key={item.name}>
+                <Link href={`${item.link}`} key={item.name} >
                     <motion.div className={`item ${initialLink === item.id ? "active" : ""}`} onClick={() => setInitialLink(item.id)} >
                         {
                             winWidth < 820 ? (

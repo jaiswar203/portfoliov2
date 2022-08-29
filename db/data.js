@@ -61,7 +61,7 @@ export const data = [
     description:
       "A Landing page for rediwne digital marketing made with NextJs, Framer Motion.",
     link: "redwine.digital",
-    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655781323/Portpolio/projects/redwine_ojvhhj.png",
+    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1661796643/Portpolio/Screenshot_48_qiv6dm.png",
   },
   {
     id: 8,
