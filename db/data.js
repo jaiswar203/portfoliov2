@@ -77,6 +77,6 @@ export const data = [
     description:
       "A Real Estate Full Stack Website created with Next Js, Express Js, MongoDB, Framer Motion, Sass,etc. This is a Full Stack website with admin panel.",
     link: "rokye.com",
-    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1661100882/Portpolio/Screenshot_45_lt5faz.png",
+    img: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1661796870/Portpolio/projects/Screenshot_46_obybcj.png",
   },
 ];
