@@ -100,16 +100,7 @@ body::-webkit-scrollbar-thumb {
   display: block;
 }
 .jais-port__navbar-item .item.active .arrow svg {
-  -webkit-animation: rotate 1s infinite;
-          animation: rotate 1s infinite;
-}
-@-webkit-keyframes rotate {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(350deg);
-  }
+  animation: rotate 1s infinite;
 }
 @keyframes rotate {
   from {
@@ -318,9 +309,18 @@ body::-webkit-scrollbar-thumb {
 }
 .jais-port__about-content__detail .para {
   width: 35rem;
+  max-height: 20rem;
+  overflow-y: scroll;
 }
-.jais-port__about-content__detail .para p:last-child {
-  margin-top: 3rem;
+.jais-port__about-content__detail .para::-webkit-scrollbar {
+  width: 6px;
+}
+.jais-port__about-content__detail .para::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #d90429;
+}
+.jais-port__about-content__detail .para p:not(:first-of-type) {
+  margin-top: 2rem;
 }
 .jais-port__about-content__detail .hire__btn {
   margin-top: 1.6rem;
@@ -880,7 +880,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 710px) {
   .jais-port__contact-content .upper,
-.jais-port__contact-content .bottom {
+  .jais-port__contact-content .bottom {
     width: 100%;
   }
   .jais-port__contact-content .upper__item:last-child {

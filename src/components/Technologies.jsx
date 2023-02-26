@@ -20,8 +20,8 @@ const Technologies = ({ winWidth }) => {
       url: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655638969/Portpolio/icon/nextjs_mk077w.png"
     },
     {
-      name: "React JS",
-      url: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655638968/Portpolio/icon/reactjs_auyqqi.png"
+      name: "Typescript",
+      url: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1677420771/Portpolio/icon/typescript_bwoe3t.png"
     },
     {
       name: "Express JS",
@@ -32,12 +32,24 @@ const Technologies = ({ winWidth }) => {
       url: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655638969/Portpolio/icon/mongodb_ja4fwy.png"
     },
     {
+      name: "Redis",
+      url: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1677420850/Portpolio/icon/icons8-redis-240_ixsphn.png"
+    },
+    {
+      name: "React JS",
+      url: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655638968/Portpolio/icon/reactjs_auyqqi.png"
+    },
+    {
       name: "Node JS",
       url: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655638969/Portpolio/icon/nodejs_mqnbin.png"
     },
     {
       name: "SASS",
       url: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655638969/Portpolio/icon/sass_lz7cw1.png"
+    },
+    {
+      name: "AWS",
+      url: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1677421030/Portpolio/icon/icons8-amazon-web-services-240_ntif5d.png"
     },
     {
       name: "HTML",
@@ -111,10 +123,10 @@ const Technologies = ({ winWidth }) => {
             className="mySwiper"
           >
             {
-              images.map((item)=>(
+              images.map((item) => (
                 <SwiperSlide key={item.name}>
                   <div className="mobile__tech">
-                    <Image src={item.url} alt={item.name} width={ winWidth <400 ? 100 : 150} height={winWidth <400 ? 100 : 150} objectFit="contain" />
+                    <Image src={item.url} alt={item.name} width={winWidth < 400 ? 100 : 150} height={winWidth < 400 ? 100 : 150} objectFit="contain" />
                   </div>
                 </SwiperSlide>
               ))

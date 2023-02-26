@@ -6,6 +6,7 @@ import JsFileDownloader from 'js-file-downloader'
 
 import { Navbar } from "../src/components"
 import PopUp from '../src/components/modal/PopUp'
+import { client } from '../lib/client'
 
 const Technologies = dynamic(() => import("../src/components/Technologies"), { ssr: false })
 const HeroComp = dynamic(() => import("../src/components/HeroComp"))
@@ -15,12 +16,13 @@ const Projects = dynamic(() => import("../src/components/Projects"))
 const Footer = dynamic(() => import("../src/components/Footer"))
 const Contact = dynamic(() => import("../src/components/Contact"))
 
-const Index = () => {
+const Index = ({projects}) => {
   const [downloadPopUp, setDownloadPopUp] = useState(false)
   const [winWidth, setWinWidth] = useState(0)
   const [showProjects, setShowProjects] = useState(false)
 
   // const { download } =useDownloader();
+  console.log({projects})
 
   useEffect(() => {
     setWinWidth(window.innerWidth)
@@ -53,7 +55,7 @@ const Index = () => {
         <Technologies winWidth={winWidth} />
         {
           showProjects && (
-            <Projects winWidth={winWidth} />
+            <Projects winWidth={winWidth} projects={projects} />
           )
         }
         <Contact />
@@ -66,6 +68,18 @@ const Index = () => {
       }
     </>
   )
+}
+
+
+export async function getServerSideProps(){
+  const query=`*[_type == "projects"]`
+  const projects=await client.fetch(query)
+
+  return {
+    props:{
+      projects
+    }
+  }
 }
 
 export default Index
