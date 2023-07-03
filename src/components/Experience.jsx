@@ -37,7 +37,7 @@ const Experience = () => {
                     <h3 className="right__date">{selected.date}</h3>
                     <div className="right__point">
                         {selected.detail.map(text => (
-                            <div className="point">
+                            <div className="point" key={text}>
                                 <GiBroadheadArrow style={{ rotate: "-45deg" }} size={18} color='#ef233c' />
                                 <p>{text}</p>
                             </div>
