@@ -32,7 +32,7 @@ const Index = ({ projects }) => {
   }, [winWidth, showProjects])
 
   const onClickDownload = () => {
-    const url = "https://res.cloudinary.com/dykwfe4cr/image/upload/v1688392896/Jaiswar_Nilesh_Resume_pacmbb.pdf"
+    const url = "https://res.cloudinary.com/dykwfe4cr/image/upload/v1691814637/Jaiswar_Resume_xut3hm.pdf"
     new JsFileDownloader({
       url: url
     }).then(() => {
