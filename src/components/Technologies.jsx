@@ -20,8 +20,17 @@ const Technologies = ({ winWidth }) => {
       url: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655638969/Portpolio/icon/nextjs_mk077w.png"
     },
     {
+      name: "Nest JS",
+      url: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1725285620/nestjs-icon-2048x2040-3rrvcej8_ckztk1.png",
+      showName: true
+    },
+    {
       name: "Typescript",
       url: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1677420771/Portpolio/icon/typescript_bwoe3t.png"
+    },
+    {
+      name: "React JS",
+      url: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655638968/Portpolio/icon/reactjs_auyqqi.png"
     },
     {
       name: "Express JS",
@@ -32,12 +41,14 @@ const Technologies = ({ winWidth }) => {
       url: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655638969/Portpolio/icon/mongodb_ja4fwy.png"
     },
     {
-      name: "Redis",
-      url: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1677420850/Portpolio/icon/icons8-redis-240_ixsphn.png"
+      name: "Tailwind CSS",
+      url: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1725285692/png-transparent-tailwind-css-hd-logo_q7w1uq.png",
+      showName: true
     },
     {
-      name: "React JS",
-      url: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1655638968/Portpolio/icon/reactjs_auyqqi.png"
+      name: "Redis",
+      url: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1677420850/Portpolio/icon/icons8-redis-240_ixsphn.png",
+      showName: true
     },
     {
       name: "Node JS",
@@ -127,6 +138,10 @@ const Technologies = ({ winWidth }) => {
                 <SwiperSlide key={item.name}>
                   <div className="mobile__tech">
                     <Image src={item.url} alt={item.name} width={winWidth < 400 ? 100 : 150} height={winWidth < 400 ? 100 : 150} objectFit="contain" />
+                    {
+                      item?.showName &&
+                      <p>{item.name}</p>
+                    }
                   </div>
                 </SwiperSlide>
               ))
@@ -147,6 +162,10 @@ const Technologies = ({ winWidth }) => {
                 <SwiperSlide key={item.name}>
                   <div className="desktop__tech">
                     <Image src={item.url} alt={item.name} width={100} height={100} />
+                    {
+                      item?.showName &&
+                      <p>{item.name}</p>
+                    }
                   </div>
                 </SwiperSlide>
               ))

@@ -184,7 +184,6 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: space-between;
   padding: 2rem 3rem;
-  margin-top: 3rem;
 }
 .jais-port__hero-info {
   width: 100%;
@@ -550,6 +549,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   width: 10rem;
   height: 10rem;
+  flex-direction: column;
 }
 .jais-port__technology-content .desktop__tech img {
   -o-object-fit: contain;
@@ -579,6 +579,10 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   width: 100%;
   height: 15rem;
+  flex-direction: column;
+}
+.jais-port__technology-content .mobile p {
+  font-size: 1.5rem;
 }
 .jais-port__technology-content .mobile .swiper-pagination {
   bottom: -3rem !important;
@@ -727,10 +731,10 @@ body::-webkit-scrollbar-thumb {
   }
   .jais-port__experience-content .left {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     overflow-x: auto;
-    width: calc(100% + 100px);
+    width: 90vw;
     margin-right: 0;
     margin-bottom: 1rem;
   }
@@ -738,6 +742,8 @@ body::-webkit-scrollbar-thumb {
     overflow-x: auto;
   }
   .jais-port__experience-content .left__btn {
+    white-space: nowrap; /* Prevent text from breaking */
+    flex-shrink: 0;
     border-left: 0px;
     border-bottom: 2px solid #eeeeee;
   }

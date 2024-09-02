@@ -58,7 +58,7 @@ const Footer = () => {
     <div className="jais-port__footer">
       <div className="jais-port__footer-heading">
         <h1>Jais<span>Folio</span></h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur iusto aliquam culpa at magni consectetur quos nemo debitis, temporibus atque natus quaerat consequuntur repellat asperiores nobis fugiat aspernatur ullam autem?</p>
+        <p>Full Stack Engineer with 2 years of experience specializing in building innovative solutions for EdTech, digital media, and real estate. Expert in JavaScript, React, Next.js, and AWS, currently developing a SAAS platform to enhance content creator productivity and streamline AI service management.</p>
       </div>
       <div className="jais-port__footer-content">
         <div className="connect">
