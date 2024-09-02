@@ -17,6 +17,10 @@ const Services = () => {
       name: "Full Stack",
       item: "/fullstack.png"
     },
+    {
+      name: "Devops",
+      item: "/devops.png"
+    },
   ]
   return (
     <section className="jais-port__services" id='services'   >

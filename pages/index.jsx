@@ -23,7 +23,6 @@ const Index = ({ projects }) => {
   const [showProjects, setShowProjects] = useState(false)
 
   // const { download } =useDownloader();
-  console.log({ projects })
 
   useEffect(() => {
     setWinWidth(window.innerWidth)

@@ -84,8 +84,19 @@ export const data = [
 export const experience = [
   {
     id: 0,
+    company: "PropertyLoop",
+    role: "Full Stack Engineer",
+    detail: [
+      "Modified an existing AI-powered audio agent for automating user inquiries related to property listings, enhancing response times and user experience.",
+      "Collaborated with cross-functional teams in an Agile environment, consistently closing tickets within the sprint cycle for timely feature and bug fix deliveries.",
+      "Implemented and optimized schedulers to automate updates of property listings on third-party portals, streamlining processes and reducing manual workload.",
+    ],
+    date: "February 2024 – May 2024",
+  },
+  {
+    id: 1,
     company: "Mauka",
-    role: "Full Stack Developer",
+    role: "Full Stack Engineer",
     detail: [
       "Modified existing Learning Management System (LMS) by implementing a new user interface, Company Leaderboard, and additional features.",
       "Developed a Course Builder with the ability to create courses, lessons, assignments, and assessments.",
@@ -95,10 +106,10 @@ export const experience = [
       "Configured Course Builder and LMS with Nginx as a reverse proxy and hosted them on AWS EC2 instances.",
       "Integrated Mixpanel analytics for tracking user interactions and created custom video analytics using the Vimeo Player API.",
     ],
-    date:"2022 september - present"
+    date: "2022 september - present",
   },
   {
-    id: 1,
+    id: 2,
     company: "Rokye Realty",
     role: "Full Stack Developer",
     detail: [
@@ -106,22 +117,22 @@ export const experience = [
       "Hosted the website on Digital Ocean, ensuring high performance and scalability.",
       "Created a custom CMS with advanced functionality for adding detailed property listings.",
       "Implemented an intuitive admin panel to efficiently manage users and properties.",
-      "Collaborated with stakeholders to meet specific requirements."
+      "Collaborated with stakeholders to meet specific requirements.",
     ],
 
-    date:"2022 may -2022 august"
+    date: "2022 may -2022 august",
   },
   {
-    id: 2,
+    id: 3,
     company: "Connectixx",
     role: "Full Stack Developer Intern",
     detail: [
       "Extensive experience in creating client websites and managing web projects",
       "Crafted impressive product and landing pages that effectively showcased client offerings",
       "Conceptualized design and implemented frontend and backend functionalities",
-      "Passionate about creating visually appealing, user-friendly websites that align with business goals"
+      "Passionate about creating visually appealing, user-friendly websites that align with business goals",
     ],
 
-    date:"2022 may -2022 august"
+    date: "2022 may -2022 august",
   },
 ];
